@@ -47,8 +47,8 @@
 
    ```shell
    $ az keyvault set-policy --name demo-keyvault \
-   												 --secret-permission set get list delete \
-   												 --spn "xxx-sp-app-id-xxx"
+       --secret-permission set get list delete \
+       --spn "xxx-sp-app-id-xxx"
    ```
 
    
@@ -57,8 +57,8 @@
 
    ```shell
    $ az keyvault secret set --vault-name demo-keyvault \
-   												 --name your-key \
-   												 --value your-value
+       --name your-key \
+       --value your-value
    ```
 
    
@@ -96,40 +96,40 @@
 
     ```shell
     $ az acr create --name demoacr \
-    								--resource-group demo-rg \
-                    --sku Basic \
-                    --admin-enabled true \
-                    --location westus
+        --resource-group demo-rg \
+        --sku Basic \
+        --admin-enabled true \
+        --location westus
     ```
     
 2. Create App Service plan
 
     ```shell
     $ az appservice plan create --name demo-plan \
-                              --resource-group demo-rg \
-                              --sku B1 \
-                              --is-linux
+        --resource-group demo-rg \
+        --sku B1 \
+        --is-linux
     ```
     
 7. Create App Service
    ```shell
    $ az webapp create --resource-group demo-rg \
-                    --plan demo-plan \
-                    --name demo-app \ 
-                    --deployment-container-image-name demoacr.azurecr.io/demo:test
+       --plan demo-plan \
+       --name demo-app \ 
+       --deployment-container-image-name demoacr.azurecr.io/demo:test
    ```
    
 8. Assign identity to App Service
    ```shell
    $ az webapp identity assign --name demo-app \
-   													--resource-group demo-rg
+   		--resource-group demo-rg
 ```
    
 9. Grant permission to MSI
    ```shell
    $ az keyvault set-policy --name demo-keyvault \
-   											 --object-id your-managed-identity-objectId \
-											 --secret-permissions get
+       --object-id your-managed-identity-objectId \
+    --secret-permissions get
    ```
 
 ### Run App Service
@@ -156,8 +156,8 @@
 
    ```shell
    az webapp config appsettings set --resource-group demo-rg \
-                                    --name demo-app \
-                                    --settings WEBSITES_PORT=8080
+       --name demo-app \
+       --settings WEBSITES_PORT=8080
    ```
 
 4. Restart App Service
