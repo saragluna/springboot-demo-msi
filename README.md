@@ -175,7 +175,7 @@
 
 4. Restart App Service
 
-5. Stream log
+5. Enable App Service logs and Stream log
 
    ```shell
    $ az webapp log tail --name demo-app --resource-group demo-rg
@@ -216,7 +216,7 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
 
 2. Restart App Service
 
-3. Stream log
+3. Enable App Service logs and Stream log
 
    ```shell
    $ az webapp log tail --name demo-app --resource-group demo-rg
