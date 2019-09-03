@@ -142,7 +142,7 @@
    ```shell
    $ az keyvault set-policy --name demo-keyvault \
        --object-id your-managed-identity-objectId \
-       --secret-permissions get
+       --secret-permissions get list
    ```
 
 ### Run App Service
@@ -194,7 +194,18 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
 
 2. Assign identity to App Service
 
+   ```shell
+   $ az webapp identity assign --name demo-app \
+   		--resource-group demo-rg
+   ```
+
 3. Grant permission to MSI
+
+   ```shell
+   $ az keyvault set-policy --name demo-keyvault \
+       --object-id your-managed-identity-objectId \
+       --secret-permissions get list
+   ```
 
 4. Deploy executable JAR file to App Service
 
@@ -222,7 +233,7 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
        --settings \
            "AZURE_KEYVAULT_URI=https://demo-keyvault.vault.azure.net/"
 
-    ```
+   ```
 3. Restart App Service
 
 4. Enable App Service logs and Stream log
