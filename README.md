@@ -147,7 +147,7 @@
 
 ### Run App Service
 
-1.  In application.properties set  
+1. In application.properties set  
 
     ```properties
     # Specify if Key Vault should be used to retrieve secrets.
@@ -155,6 +155,16 @@
     
     # Specify the URI of your Key Vault (e.g.: https://name.vault.azure.net/).
     azure.keyvault.uri=https://demo-keyvault.vault.azure.net/
+    ```
+
+    **Or** you perfer to set via Application Settings
+
+    ```shell
+    az webapp config appsettings set \
+        --name demo-app \
+        --resource-group demo-rg \
+        --settings \
+            "AZURE_KEYVAULT_URI=https://demo-keyvault.vault.azure.net/"    
     ```
 
 2. Build docker image and push
@@ -225,16 +235,16 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
    azure.keyvault.uri=https://demo-keyvault.vault.azure.net/
    ```
 
-2. Or you perfer to set via Application Settings
+   **Or** you perfer to set via Application Settings
+
    ```shell
    az webapp config appsettings set \
        --name demo-app \
        --resource-group demo-rg \
        --settings \
            "AZURE_KEYVAULT_URI=https://demo-keyvault.vault.azure.net/"
-
    ```
-   
+
 3. Restart App Service
 
 4. Enable App Service logs and Stream log
@@ -243,7 +253,7 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
    $ az webapp log tail --name demo-app --resource-group demo-rg
    ```
    
-5. Check this URL in browser
+4. Check this URL in browser
 
    ```text
    https://demo-app.azurewebsites.net/get
