@@ -76,7 +76,8 @@
 
 ### Run Spring Boot application
 
-1. In application.properties set
+1. In application.properties set  
+    
     ```properties
     # Specify if Key Vault should be used to retrieve secrets.
     azure.keyvault.enabled=true
@@ -145,15 +146,15 @@
 
 ### Run App Service
 
-1.  In application.properties set
+1.  In application.properties set  
 
-   ```properties
-   # Specify if Key Vault should be used to retrieve secrets.
-   azure.keyvault.enabled=true
-   
-   # Specify the URI of your Key Vault (e.g.: https://name.vault.azure.net/).
-   azure.keyvault.uri=https://demo-keyvault.vault.azure.net/
-   ```
+    ```properties
+    # Specify if Key Vault should be used to retrieve secrets.
+    azure.keyvault.enabled=true
+    
+    # Specify the URI of your Key Vault (e.g.: https://name.vault.azure.net/).
+    azure.keyvault.uri=https://demo-keyvault.vault.azure.net/
+    ```
 
 2. Build docker image and push
 
