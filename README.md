@@ -225,7 +225,7 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
    azure.keyvault.uri=https://demo-keyvault.vault.azure.net/
    ```
 
-2. Set App Service Config
+2. Or you perfer to set via Application Settings
    ```shell
    az webapp config appsettings set \
        --name demo-app \
@@ -234,6 +234,7 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
            "AZURE_KEYVAULT_URI=https://demo-keyvault.vault.azure.net/"
 
    ```
+   
 3. Restart App Service
 
 4. Enable App Service logs and Stream log
@@ -241,6 +242,14 @@ refer to [this](https://docs.microsoft.com/en-us/azure/app-service/overview-mana
    ```shell
    $ az webapp log tail --name demo-app --resource-group demo-rg
    ```
+   
+5. Check this URL in browser
+
+   ```text
+   https://demo-app.azurewebsites.net/get
+   ```
+
+   
 
 ## References
 
