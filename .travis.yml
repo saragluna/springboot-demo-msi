@@ -10,4 +10,4 @@ jobs:
     - stage: test
       script:
         - mvn clean package -DskipTests
-      if: env(CLIENT_ID2) IS present
+      if: NOT env(CLIENT_ID) IS blank
