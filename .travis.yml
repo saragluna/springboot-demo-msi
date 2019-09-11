@@ -9,4 +9,5 @@ jobs:
   include:
     - stage: test
       script:
+        - echo $CLIENT_ID
         - mvn clean package -DskipTests
