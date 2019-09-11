@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - openjdk8
+
+sudo: required
+install: true
+
+jobs:
+  include:
+    - stage: test
+      script:
+        - mvn clean package -DskipTests
