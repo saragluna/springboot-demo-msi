@@ -9,7 +9,5 @@ jobs:
   include:
     - stage: test
       script:
-        - if [ -z "$CLIENT_ID" ]; then
-            travis_terminate 0
-          fi
+        - 'if [ -z "$CLIENT_ID" ]; then travis_terminate 0; fi'
         - mvn clean package -DskipTests
