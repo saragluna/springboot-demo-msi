@@ -11,7 +11,7 @@
 - [Run JAR application with MSI](#run-jar-application-with-msi)
   - [Set up App Service, MSI and deploy](#set-up-app-service-msi-and-deploy)
   - [Run App Service](#run-app-service)
-- [References](#references)
+- [References](#references)  
 
 
 
