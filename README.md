@@ -28,7 +28,7 @@
 
    ```shell
    $ az group create --name demo-rg --location westus
-   ```
+   ```  
 
    
 
